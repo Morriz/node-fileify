@@ -5,8 +5,8 @@ var vm = require('vm');
 
 exports.twice = function () {
     var src = browserify()
-        .use(fileify('one', __dirname + '/static'))
-        .use(fileify('two', __dirname + '/two'))
+        .use(fileify.register('one', __dirname + '/static'))
+        .use(fileify.register('two', __dirname + '/two'))
         .bundle()
     ;
     

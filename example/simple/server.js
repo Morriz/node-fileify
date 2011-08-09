@@ -12,4 +12,4 @@ var bundle = browserify({
 app.use(bundle);
 
 var fileify = require('fileify');
-bundle.use(fileify('files', __dirname + '/files'));
+bundle.use(fileify.register('files', __dirname + '/files'));
