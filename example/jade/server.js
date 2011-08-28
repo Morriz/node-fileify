@@ -18,4 +18,4 @@ var bundle = browserify({
 app.use(bundle);
 
 var fileify = require('fileify');
-bundle.use(fileify.register('views', __dirname + '/views'));
+bundle.use(fileify('views', __dirname + '/views'));

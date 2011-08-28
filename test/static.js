@@ -5,7 +5,7 @@ var vm = require('vm');
 
 exports.static = function () {
     var src = browserify()
-        .use(fileify.register('files', __dirname + '/static'))
+        .use(fileify('files', __dirname + '/static'))
         .bundle()
     ;
     

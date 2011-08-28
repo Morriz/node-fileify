@@ -20,7 +20,7 @@ exports.watch = function () {
     
     var x0 = Math.random();
     write('x.txt', x0, function () {
-        var fn = fileify.register('files', __dirname + '/watch', { watch : true });
+        var fn = fileify('files', __dirname + '/watch', { watch : true });
         var b = browserify().use(fn);
         
         var c0 = {};
